@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Exercise12_09 {
     public static void main(String[] args) {
@@ -8,7 +9,8 @@ public class Exercise12_09 {
 
         //try to convert and display
         try {
-            System.out.println(binaryString + " in decimal is " + bin2Dec(binaryString));
+            System.out.println(binaryString + 
+                " in decimal is " + bin2Dec(binaryString));
         } 
         catch (BinaryFormatException ex) {
         // display custom message
@@ -17,9 +19,10 @@ public class Exercise12_09 {
 
         input.close();
     }
-}
-/** Convert binary string to decimal */
- public static int bin2Dec(String binaryString) throws BinaryFormatException {
+
+// Convert binary string to decimal
+ public static int bin2Dec(String binaryString) 
+    throws BinaryFormatException {
 
     for (int i = 0; i < binaryString.length(); i++) {
         if (binaryString.charAt(i) != '0' 
@@ -39,7 +42,7 @@ public class Exercise12_09 {
 
     // return
     return decimalValue;
-
+    }
  }
 // custom exception class for invalid binary strings
 class BinaryFormatException extends Exception {
