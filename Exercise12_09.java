@@ -41,3 +41,9 @@ public class Exercise12_09 {
     return decimalValue;
 
  }
+// custom exception class for invalid binary strings
+class BinaryFormatException extends Exception {
+    public BinaryFormatException(String message) {
+        super(message);
+    }
+}
